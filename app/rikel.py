@@ -15,6 +15,11 @@ def respond():
 	req = request.json
 	print req
 	response = {"version": "1.0",
+	"sessionAttributes": {
+    	"supportedHoriscopePeriods": {
+    	"daily": True,
+    	"weekly": False,
+    	"monthly": False}},
 	"response": {
     "outputSpeech": {
       "type": "PlainText",
