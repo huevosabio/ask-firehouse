@@ -24,15 +24,14 @@ def respond():
       "title": "Rikel Says",
       "subtitle": "string",
       "content": "Well, people that suck, suck"
-    },
-    "shouldEndSession": False}}
+    },"shouldEndSession": False}}
 
 	if req['request']['type'] == 'LaunchRequest':
-		response['text'] = 'Ahm, yes? How may I help you?'
+		response['response']['outputSpeech']['text'] = 'Ahm, yes? How may I help you?'
 	elif req['request']['type'] == 'IntentRequest':
-		response['text'] = "Well, people that suck, suck"
+		response['response']['outputSpeech']['text'] = "Well, people that suck, suck"
 	elif req['request']['type'] == 'SessionEndedRequest':
-		response['text'] = 'Ok, that was $20.'
+		response['response']['outputSpeech']['text'] = 'Ok, that was $20.'
 		response['shouldEndSession'] = True
 	else:
 		pass
