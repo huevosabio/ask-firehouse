@@ -44,9 +44,7 @@ def respond():
 
 	js = json.dumps(response)
 
-	rs = Response(
-        (js, indent=indent, separators=separators),
-         '\n'),
+	rs = Response(js,'\n'),
         mimetype='application/json;charset=UTF-8')
 
 	return rs
