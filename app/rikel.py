@@ -16,13 +16,13 @@ def respond():
 	response = {"version": "1.0",
 	"response": {
     "outputSpeech": {
-      "type": "string",
+      "type": "PlainText",
       "text": "Well, people that suck, suck"
     },
     "card": {
-      "type": "string",
+      "type": "PlainText",
       "title": "Rikel Says",
-      "subtitle": "string",
+      "subtitle": "PlainText",
       "content": "Well, people that suck, suck"
     },"shouldEndSession": False}}
 
