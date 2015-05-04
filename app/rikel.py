@@ -13,6 +13,7 @@ def test():
 @app.route('/echo',methods=['POST','GET'])
 def respond():
 	req = request.json
+	print req
 	response = {"version": "1.0",
 	"response": {
     "outputSpeech": {
