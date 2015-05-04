@@ -43,7 +43,8 @@ def respond():
 		pass
 
 	js = flask.jsonify(response)
-
+	js.headers['Content-Type'] = 'application/json;charset=UTF-8'
+	print type(js.headers)
 	print js.headers
 
-	return flask.jsonify(response)
+	return js
