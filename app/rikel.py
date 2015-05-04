@@ -1,6 +1,6 @@
 from app import app
 import time
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 import flask
 
 @app.route('/api/test',methods=['POST','GET'])
@@ -42,4 +42,11 @@ def respond():
 	else:
 		pass
 
-	return flask.jsonify(response)
+	js = json.dumps(response)
+
+	rs = Response(
+        (js, indent=indent, separators=separators),
+         '\n'),
+        mimetype='application/json;charset=UTF-8')
+
+	return rs
