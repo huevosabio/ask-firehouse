@@ -42,9 +42,8 @@ def respond():
 	else:
 		pass
 
-	js = json.dumps(response)
+	js = flask.jsonify(response)
 
-	rs = Response(js,'\n'),
-        mimetype='application/json;charset=UTF-8')
+	print js.headers
 
-	return rs
+	return flask.jsonify(response)
