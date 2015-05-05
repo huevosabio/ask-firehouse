@@ -28,7 +28,7 @@ def respond():
     "card": {
       "type": "PlainText",
       "title": "Rikel Says",
-      "subtitle": "PlainText",
+      "subtitle": "Simple",
       "content": "Well, people that suck, suck"
     },"shouldEndSession": False}}
 
